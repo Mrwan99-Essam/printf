@@ -50,7 +50,7 @@ int print_int(va_list ap, params_t *params)
  * @ap: argument pointer
  * @params: parameter struct
  *
- * return: number chars printed
+ * Return: number chars printed
 */
 
 int print_string(va_list ap, params_t *params)
@@ -115,7 +115,7 @@ int print_percent(va_list ap, params_t *params)
  * Return: number of chars printed
 */
 
-int print_s(va_list ap, params_t *params)
+int print_S(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 	char *hex;
