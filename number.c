@@ -39,14 +39,14 @@ char *convert(long int num, int base, int flags, params_t *params)
 }
 
 /**
- * print_usigned - print unsigned integer number
+ * print_unsigned - print unsigned integer number
  * @ap: argument pointer
  * @params: the parameters struct
  *
  * Return: bytes printed
 */
 
-int print_usigned(va_list ap, params_t *params)
+int print_unsigned(va_list ap, params_t *params)
 {
 	unsigned long l;
 
