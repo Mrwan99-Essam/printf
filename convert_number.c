@@ -15,7 +15,7 @@ int print_hex(va_list ap, params_t *params)
 	char *str;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_list(ap, unsigned long);
+		l = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
@@ -46,7 +46,7 @@ int print_HEX(va_list ap, params_t *params)
 	char *str;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_list(ap, unsigned long);
+		l = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
