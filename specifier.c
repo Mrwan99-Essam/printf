@@ -80,12 +80,12 @@ int get_flag(char *s, params_t *params)
 		case '#':
 			i = params->hashtag_flag = 1;
 			break;
-		 case '-':
-                        i = params->minus_flag = 1;
-                        break;
-		 case '0':
-                        i = params->zero_flag = 1;
-                        break;
+		case '-':
+			i = params->minus_flag = 1;
+			break;
+		case '0':
+			i = params->zero_flag = 1;
+			break;
 	}
 	return (i);
 }
@@ -104,12 +104,12 @@ int get_modifier(char *s, params_t *params)
 
 	switch (*s)
 	{
-		 case 'h':
-                        i = params->h_modifier = 1;
-                        break;
-		 case 'l':
-                        i = params->l_modifier = 1;
-                        break;
+		case 'h':
+			i = params->h_modifier = 1;
+			break;
+		case 'l':
+			i = params->l_modifier = 1;
+			break;
 	}
 	return (i);
 }
@@ -140,5 +140,3 @@ char *get_width(char *s, params_t *params, va_list ap)
 	params->width = w;
 	return (s);
 }
-
-
