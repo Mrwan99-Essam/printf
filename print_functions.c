@@ -89,7 +89,7 @@ int print_string(va_list ap, params_t *params)
 			else
 				sum += _puts(str);
 		}
-		return (sum)
+		return (sum);
 }
 
 /**
@@ -142,4 +142,3 @@ int print_s(va_list ap, params_t *params)
 	}
 	return (sum);
 }
-	
