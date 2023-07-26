@@ -32,16 +32,16 @@ int print_from_to(char *start, char *stop, char *except)
 
 int print_rev(va_list ap, params_t *params)
 {
-	int length, total = 0;
+	int len, total = 0;
 	char *str = va_arg(ap, char *);
 	(void)params;
 
 	if (str)
 	{
-		for (length = 0; *str; str++)
-			length++;
+		for (len = 0; *str; str++)
+			len++;
 		str--;
-		for (; length > 0; length--, str--)
+		for (; len > 0; len--, str--)
 			total += _putchar(*str);
 	}
 	return (total);
@@ -58,7 +58,7 @@ int print_rev(va_list ap, params_t *params)
 int print_rot13(va_list ap, params_t *params)
 {
 	int i, index;
-	int counter = 0;
+	int count = 0;
 	char arr[] =
 		"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
@@ -72,12 +72,12 @@ int print_rot13(va_list ap, params_t *params)
 				|| (a[i] >= 'a' && a[i] <= 'z'))
 		{
 			index = a[i] - 65;
-			counter += _putchar(arr[index]);
+			count += _putchar(arr[index]);
 		}
 		else
-			counter += _putchar(a[i]);
+			count += _putchar(a[i]);
 		i++;
 	}
-	return (counter);
+	return (count);
 }
 
