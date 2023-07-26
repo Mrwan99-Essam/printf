@@ -55,7 +55,7 @@ int print_number(char *str, params_t *params)
 	if (negative)
 		*--str = '-';
 
-	if (!params->minus_flags)
+	if (!params->minus_flag)
 		return (print_number_right_shift(str, params));
 	else
 		return (print_number_left_shift(str, params));
@@ -81,7 +81,7 @@ int print_number_right_shift(char *str, params_t *params)
 	if (negative1 && i < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
 	else
-		negative = 0;
+		negative1 = 0;
 	if ((params->plus_flag && !negative2) ||
 			(!params->plus_flag && params->space_flag && !negative2))
 		i++;
@@ -94,7 +94,7 @@ int print_number_right_shift(char *str, params_t *params)
 		num += _putchar(' ');
 	while (i++ < params->width)
 		num += _putchar(pad_char);
-	if (negative && pad_char == ' ')
+	if (negative1 && pad_char == ' ')
 		num += _putchar('-');
 	if (params->plus_flag && !negative2 && pad_char == ' ' && !params->unsign)
 		num += _putchar('+');

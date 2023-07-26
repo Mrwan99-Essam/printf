@@ -32,7 +32,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 	{
 		if (*s == specifiers[i].specifier[0])
 		{
-			return (specifiers[i].fun);
+			return (specifiers[i].f);
 		}
 		i++;
 	}
@@ -75,7 +75,7 @@ int get_flag(char *s, params_t *params)
 			i = params->plus_flag = 1;
 			break;
 		case ' ':
-			i = params->space_flags = 1;
+			i = params->space_flag = 1;
 			break;
 		case '#':
 			i = params->hashtag_flag = 1;
